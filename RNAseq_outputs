@@ -1,0 +1,16 @@
+Analysed RNAseq data? Confused if you should use RPKM (reads per kilobase per million mapped reads)/FPKM Fragments Per Kilobase of transcript per Million mapped reads or TPM (Transcripts per million)?
+
+Let us start understanding what each of them represents - 
+
+RPKM and FPKM are almost the same. However, FPKM is used when we have paired-end reads. However, RPKM is used when we are dealing with single-end reads. Normalisation follows:
+Step1: normalise sequencing depths (i.e., total reads/million)
+Step2: normalise by gene length size
+
+TPMs are like them only. However, the normalisation method is the opposite of RPKM/FPKM. In TPMs, 
+Step1: normalise gene length size
+Step2: normalise sequencing depths
+
+Why have we started to use TPM? 
+TPMs provide the proportion of reads mapped to what is in each sample. This metric seems more appropriate since RNAseq is all about comparing relative proportions. 
+
+
